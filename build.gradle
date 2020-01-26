@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'net.minecrell.plugin-yml.nukkit' version '0.3.0'
+}
+
+group 'br.com.gamemods'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+nukkit {
+    main = 'br.com.gamemods.FishingRodFixPlugin'
+    api = ['1.0.9']
+    authors = ['joserobjr']
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'http://repo.nukkitx.com/main/' }
+}
+
+
+dependencies {
+    implementation 'cn.nukkit:nukkit:1.0-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
